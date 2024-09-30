@@ -1,3 +1,4 @@
+<!--
 <div class="container mt-5">
   <h2 class="text-center">List of Products</h2>
   <div class="row">
@@ -15,3 +16,11 @@
     </div>
   </div>
 </div>
+
+-->
+<div class="row">
+  <div *ngFor="let product of products,let i=index">
+    <app-product-itm [productItm]="products[i]" (selectedProduct)="onSelected($event)" ></app-product-itm>
+  </div>
+</div>
+
